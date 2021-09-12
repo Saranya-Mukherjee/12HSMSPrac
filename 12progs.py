@@ -47,8 +47,8 @@
 #         m = j
 #         for i in range(j + 1, size):
 #             if l[i] < l[m]:
-#                 min_idx = i
-#         (l[j], l[min_idx]) = (l[min_idx], l[j])
+#                 m = i
+#         (l[j], l[m]) = (l[m], l[j])
 #     return l
 #
 # data = [-2, 45, 0, 11, -9]
