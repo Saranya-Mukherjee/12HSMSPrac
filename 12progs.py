@@ -8,7 +8,7 @@
 #             n = n// 10
 #         if i==s:
 #             print(i)
-#
+
 # Prime numbers
 # def prime():
 #     for i in range(100,1000):
@@ -19,6 +19,7 @@
 #                 break
 #         if not flag:
 #             print(i)
+
 #
 # Arrange all names in ascending order in a list
 # def bub_sort(l):
@@ -27,6 +28,9 @@
 #             if l[j] > l[j + 1]:
 #                 l[j], l[j + 1] = l[j + 1], l[j]
 #     return l
+#
+# l=["ram","sam","bam","pam"]
+# print(bub_sort(l))
 #
 # Create a dictionary with the details of products(PID, pname, manufacturing date, qty, price)
 # then define a function to find out details of all products whose qty>100 and price<450
@@ -101,20 +105,21 @@
 # import pickle
 # def write_details():
 #     lst=[]
-#     for _ in range(10):
+#     for _ in range(4):
 #         r=int(input("Enter roll "))
 #         n=input("Enter name ")
 #         p=float(input("Enter percentage "))
 #         d=str(r)+' '+n+' '+str(p)
 #         lst.append(d)
-#     fp=open("student","wb")
+#
+#     fp=open("student.dat","wb")
 #     pickle.dump(lst,fp)
 #     fp.close()
 # write_details()
-#
+
 # To read the roll,name and per stored in  binary file.
 # import pickle
-# f=open("student","rb")
+# f=open("student.dat","rb")
 # temp=pickle.load(f)
 # f.close()
 # for i in temp:
@@ -293,17 +298,17 @@ INSERT INTO Table1 VALUES (10001,'Lam');
 INSERT INTO Table1 VALUES (100001,'Gam');
 
 Insert Values into Names:
-INSERT INTO Names VALUES (1,1000)
-INSERT INTO Names VALUES (101,10000)
-INSERT INTO Names VALUES (1001,100000000)
-INSERT INTO Names VALUES (10001,100000000)
-INSERT INTO Names VALUES (100001,100000)
+INSERT INTO Names VALUES (1,1000);
+INSERT INTO Names VALUES (101,10000);
+INSERT INTO Names VALUES (1001,100000000);
+INSERT INTO Names VALUES (10001,100000000);
+INSERT INTO Names VALUES (100001,100000);
 
 Join the tables:
 SELECT Table1.Name,Names.Salary
 FROM Table1
 FULL JOIN Names
-ON Table1.ID = Names.ID
+ON Table1.ID = Names.ID;
 
 Find Duplicate:
 SELECT ID, COUNT(ID)
@@ -364,7 +369,7 @@ WHERE Name IN ('abc','cde','fgh');
 
 Find people whose Salaries are in between 100000 and 200000
 SELECT * FROM Names
-WHERE Salary BETWEEN 10 AND 20;
+WHERE Salary BETWEEN 100000 AND 200000;
 '''
 
 # Connect to database
